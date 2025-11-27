@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casa & Arredamento - Scontismart</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background: #f5f7fa; }
+    header { background: #0d6efd; padding: 20px; color: white; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+    .logo { font-size: 28px; font-weight: bold; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-size: 16px; }
+    .category-hero { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 60px 20px; text-align: center; color: white; }
+    .category-hero h1 { font-size: 42px; margin-bottom: 15px; }
+    .category-hero p { font-size: 18px; max-width: 700px; margin: auto; }
+    .breadcrumb { padding: 20px; font-size: 14px; color: #666; }
+    .breadcrumb a { color: #0d6efd; text-decoration: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .section-title { font-size: 28px; margin: 40px 0 20px; color: #333; }
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; margin-bottom: 50px; }
+    .product-card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s; }
+    .product-card:hover { transform: translateY(-5px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+    .product-card img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; }
+    .product-card h3 { margin-top: 15px; font-size: 18px; color: #333; min-height: 44px; }
+    .product-card .price { font-size: 24px; color: #0d6efd; font-weight: bold; margin: 10px 0; }
+    .product-card .old-price { text-decoration: line-through; color: #999; font-size: 16px; margin-right: 10px; }
+    .product-card .discount { background: #ff4444; color: white; padding: 5px 10px; border-radius: 5px; font-size: 14px; display: inline-block; margin: 10px 0; }
+    .product-card .description { color: #666; font-size: 14px; line-height: 1.6; margin: 10px 0; }
+    .product-card .btn { display: block; background: #0d6efd; color: white; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 15px; transition: background 0.3s; }
+    .product-card .btn:hover { background: #0b5ed7; }
+    footer { text-align: center; padding: 20px; background: #0d6efd; color: white; margin-top: 40px; }
+    .footer-links { margin-top: 10px; }
+    .footer-links a { color: white; text-decoration: underline; margin: 0 8px; font-size: 14px; }
+    .search-container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+    .search-box { display: flex; gap: 10px; }
+    .search-box input { flex: 1; padding: 14px; font-size: 16px; border: 2px solid #ddd; border-radius: 8px; }
+    .search-box button { padding: 14px 30px; background: #0d6efd; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; }
+    .search-box button:hover { background: #0b5ed7; }
+    .no-results { text-align: center; padding: 40px; color: #666; font-size: 18px; display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" style="text-decoration: none; color: white;"><div class="logo">Scontismart</div></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#categorie">Categorie</a>
+      <a href="index.html#categorie">Top Offerte</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+  </header>
+
+  <section class="category-hero">
+    <h1>🏡 Casa & Arredamento</h1>
+    <p>Trasforma la tua casa con le nostre offerte su mobili, decorazioni e accessori per la casa. Qualità e risparmio in ogni ambiente!</p>
+  </section>
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> > Casa & Arredamento
+  </div>
+
+  <div class="search-container">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Cerca prodotti in questa categoria... (es: divano, lampada, pentole, tappeto)">
+      <button onclick="searchProducts()">🔍 Cerca</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 class="section-title">🛋️ Arredamento</h2>
+    <div class="products-grid">
+      
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc" alt="Divano" />
+        <span class="discount">-35%</span>
+        <h3>Divano 3 Posti in Tessuto</h3>
+        <div>
+          <span class="old-price">€899,00</span>
+          <span class="price">€584,00</span>
+        </div>
+        <p class="description">Design moderno, Tessuto sfoderabile, Comodo e resistente, Vari colori</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126" alt="Scrivania" />
+        <span class="discount">-40%</span>
+        <h3>Scrivania Ufficio con Cassetti</h3>
+        <div>
+          <span class="old-price">€249,00</span>
+          <span class="price">€149,00</span>
+        </div>
+        <p class="description">120x60cm, 3 cassetti, Legno resistente, Perfetta per smart working</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5" alt="Libreria" />
+        <span class="discount">-45%</span>
+        <h3>Libreria a 5 Ripiani</h3>
+        <div>
+          <span class="old-price">€179,00</span>
+          <span class="price">€98,45</span>
+        </div>
+        <p class="description">180cm altezza, Design minimalista, Facile montaggio, Stabile e capiente</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2" alt="Sedia Gaming" />
+        <span class="discount">-50%</span>
+        <h3>Sedia Gaming Ergonomica</h3>
+        <div>
+          <span class="old-price">€299,00</span>
+          <span class="price">€149,50</span>
+        </div>
+        <p class="description">Reclinabile 180°, Cuscini lombari, Braccioli regolabili, Ruote silenziose</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+    </div>
+
+    <h2 class="section-title">🛏️ Camera da Letto</h2>
+    <div class="products-grid">
+      
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" alt="Set Biancheria" />
+        <span class="discount">-42%</span>
+        <h3>Set Biancheria Letto Matrimoniale</h3>
+        <div>
+          <span class="old-price">€69,00</span>
+          <span class="price">€40,02</span>
+        </div>
+        <p class="description">Cotone 100%, Copripiumino + federe, Morbido e traspirante, Lavabile 60°</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af" alt="Cuscino Memory" />
+        <span class="discount">-55%</span>
+        <h3>Cuscino Memory Foam Cervicale</h3>
+        <div>
+          <span class="old-price">€59,99</span>
+          <span class="price">€27,00</span>
+        </div>
+        <p class="description">Supporto ergonomico, Anallergico, Fodera lavabile, Ideale per cervicale</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5" alt="Comodino" />
+        <span class="discount">-38%</span>
+        <h3>Comodino Moderno con 2 Cassetti</h3>
+        <div>
+          <span class="old-price">€89,00</span>
+          <span class="price">€55,18</span>
+        </div>
+        <p class="description">Design elegante, 2 cassetti capienti, Facile montaggio, Varie finiture</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+    </div>
+
+    <h2 class="section-title">🍽️ Cucina & Accessori</h2>
+    <div class="products-grid">
+      
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba" alt="Set Pentole" />
+        <span class="discount">-48%</span>
+        <h3>Set 10 Pentole Antiaderenti</h3>
+        <div>
+          <span class="old-price">€149,00</span>
+          <span class="price">€77,48</span>
+        </div>
+        <p class="description">Rivestimento antiaderente, Adatte a induzione, Facili da pulire, Manici ergonomici</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa" alt="Set Coltelli" />
+        <span class="discount">-52%</span>
+        <h3>Set Coltelli Professionali 8 Pezzi</h3>
+        <div>
+          <span class="old-price">€89,00</span>
+          <span class="price">€42,72</span>
+        </div>
+        <p class="description">Acciaio inox, Lama affilata, Ceppo in legno incluso, Per ogni utilizzo</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa" alt="Set Piatti" />
+        <span class="discount">-44%</span>
+        <h3>Servizio Piatti 18 Pezzi</h3>
+        <div>
+          <span class="old-price">€79,00</span>
+          <span class="price">€44,24</span>
+        </div>
+        <p class="description">Porcellana di qualità, Design elegante, Lavabile in lavastoviglie, Per 6 persone</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba" alt="Contenitori" />
+        <span class="discount">-60%</span>
+        <h3>Set 20 Contenitori Ermetici</h3>
+        <div>
+          <span class="old-price">€49,99</span>
+          <span class="price">€20,00</span>
+        </div>
+        <p class="description">BPA free, Chiusura ermetica, Trasparenti, Varie dimensioni, Empilabili</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+    </div>
+
+    <h2 class="section-title">💡 Illuminazione & Decorazioni</h2>
+    <div class="products-grid">
+      
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15" alt="Lampada LED" />
+        <span class="discount">-50%</span>
+        <h3>Lampada da Terra LED Dimmerabile</h3>
+        <div>
+          <span class="old-price">€79,00</span>
+          <span class="price">€39,50</span>
+        </div>
+        <p class="description">Luce regolabile, Risparmio energetico, Design moderno, 3 temperature colore</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88" alt="Specchio" />
+        <span class="discount">-42%</span>
+        <h3>Specchio da Parete con Cornice</h3>
+        <div>
+          <span class="old-price">€69,00</span>
+          <span class="price">€40,02</span>
+        </div>
+        <p class="description">60x80cm, Cornice elegante, Facile installazione, Design versatile</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1557682250-33bd709cbe85" alt="Tappeto" />
+        <span class="discount">-58%</span>
+        <h3>Tappeto Moderno Soggiorno 160x230cm</h3>
+        <div>
+          <span class="old-price">€119,00</span>
+          <span class="price">€49,98</span>
+        </div>
+        <p class="description">Morbido e confortevole, Facile da pulire, Design geometrico, Antiscivolo</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="no-results" id="noResults">
+    Nessun prodotto trovato per la tua ricerca. Prova con altre parole chiave.
+  </div>
+
+  <footer>
+    © 2025 Scontismart - Tutti i diritti riservati
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="termini.html">Termini e Condizioni</a>
+      <a href="disclaimer.html">Disclaimer Affiliazioni</a>
+    </div>
+  </footer>
+
+  <script>
+    function searchProducts() {
+      const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+      const productCards = document.querySelectorAll('.product-card');
+      const noResults = document.getElementById('noResults');
+      let foundCount = 0;
+
+      if (searchTerm === '') {
+        productCards.forEach(card => {
+          card.style.display = 'block';
+        });
+        noResults.style.display = 'none';
+        return;
+      }
+
+      productCards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const description = card.querySelector('.description').textContent.toLowerCase();
+        const fullText = title + ' ' + description;
+
+        if (fullText.includes(searchTerm)) {
+          card.style.display = 'block';
+          foundCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (foundCount === 0) {
+        noResults.style.display = 'block';
+      } else {
+        noResults.style.display = 'none';
+      }
+    }
+
+    document.getElementById('searchInput').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        searchProducts();
+      }
+    });
+  </script>
+</body>
+</html>

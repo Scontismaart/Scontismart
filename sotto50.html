@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sotto 50€ - Scontismart</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background: #f5f7fa; }
+    header { background: #0d6efd; padding: 20px; color: white; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+    .logo { font-size: 28px; font-weight: bold; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-size: 16px; }
+    .category-hero { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 60px 20px; text-align: center; color: white; }
+    .category-hero h1 { font-size: 42px; margin-bottom: 15px; }
+    .category-hero p { font-size: 18px; max-width: 700px; margin: auto; }
+    .breadcrumb { padding: 20px; font-size: 14px; color: #666; }
+    .breadcrumb a { color: #0d6efd; text-decoration: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .section-title { font-size: 28px; margin: 40px 0 20px; color: #333; }
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; margin-bottom: 50px; }
+    .product-card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s; }
+    .product-card:hover { transform: translateY(-5px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+    .product-card img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; }
+    .product-card h3 { margin-top: 15px; font-size: 18px; color: #333; min-height: 44px; }
+    .product-card .price { font-size: 24px; color: #0d6efd; font-weight: bold; margin: 10px 0; }
+    .product-card .old-price { text-decoration: line-through; color: #999; font-size: 16px; margin-right: 10px; }
+    .product-card .discount { background: #ff4444; color: white; padding: 5px 10px; border-radius: 5px; font-size: 14px; display: inline-block; margin: 10px 0; }
+    .product-card .price-badge { background: #28a745; color: white; padding: 8px 12px; border-radius: 20px; font-size: 13px; font-weight: bold; display: inline-block; margin: 10px 0; }
+    .product-card .description { color: #666; font-size: 14px; line-height: 1.6; margin: 10px 0; }
+    .product-card .btn { display: block; background: #0d6efd; color: white; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 15px; transition: background 0.3s; }
+    .product-card .btn:hover { background: #0b5ed7; }
+    footer { text-align: center; padding: 20px; background: #0d6efd; color: white; margin-top: 40px; }
+    .footer-links { margin-top: 10px; }
+    .footer-links a { color: white; text-decoration: underline; margin: 0 8px; font-size: 14px; }
+    .search-container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+    .search-box { display: flex; gap: 10px; }
+    .search-box input { flex: 1; padding: 14px; font-size: 16px; border: 2px solid #ddd; border-radius: 8px; }
+    .search-box button { padding: 14px 30px; background: #0d6efd; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; }
+    .search-box button:hover { background: #0b5ed7; }
+    .no-results { text-align: center; padding: 40px; color: #666; font-size: 18px; display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" style="text-decoration: none; color: white;"><div class="logo">Scontismart</div></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#categorie">Categorie</a>
+      <a href="index.html#categorie">Top Offerte</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+  </header>
+
+  <section class="category-hero">
+    <h1>💰 Prodotti Sotto 50€</h1>
+    <p>Scopri prodotti di qualità a prezzi imbattibili! Tutto sotto i 50 euro con sconti incredibili.</p>
+  </section>
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> > Sotto 50€
+  </div>
+
+  <div class="search-container">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Cerca prodotti sotto 50€...">
+      <button onclick="searchProducts()">🔍 Cerca</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 class="section-title">🔥 Best Seller Sotto 50€</h2>
+    <div class="products-grid">
+      
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae" alt="Auricolari Wireless" />
+        <span class="price-badge">💰 Solo €24,99</span>
+        <span class="discount">-58%</span>
+        <h3>Auricolari Bluetooth 5.3 TWS</h3>
+        <div>
+          <span class="old-price">€59,99</span>
+          <span class="price">€24,99</span>
+        </div>
+        <p class="description">Custodia di ricarica, 24h autonomia, Microfono HD, Controllo touch</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1625948515291-69613efd103f" alt="Powerbank" />
+        <span class="price-badge">💰 Solo €19,99</span>
+        <span class="discount">-60%</span>
+        <h3>Power Bank 30000mAh Fast Charge</h3>
+        <div>
+          <span class="old-price">€49,99</span>
+          <span class="price">€19,99</span>
+        </div>
+        <p class="description">3 porte USB, Ricarica rapida 22.5W, Display LED, Ultra compatto</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="Smartwatch" />
+        <span class="price-badge">💰 Solo €39,99</span>
+        <span class="discount">-50%</span>
+        <h3>Smartwatch Fitness Tracker</h3>
+        <div>
+          <span class="old-price">€79,99</span>
+          <span class="price">€39,99</span>
+        </div>
+        <p class="description">Cardiofrequenzimetro, GPS, Impermeabile IP68, 100+ sport modes</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1620287341260-912e619ed40b" alt="Bollitore" />
+        <span class="price-badge">💰 Solo €29,99</span>
+        <span class="discount">-55%</span>
+        <h3>Bollitore Elettrico Vetro 1.8L</h3>
+        <div>
+          <span class="old-price">€66,99</span>
+          <span class="price">€29,99</span>
+        </div>
+        <p class="description">Temperatura regolabile, LED illuminazione, Acciaio inox, 2200W</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1601524909162-ae8725290836" alt="Cover Smartphone" />
+        <span class="price-badge">💰 Solo €12,99</span>
+        <span class="discount">-65%</span>
+        <h3>Set 3 Cover Antiurto + Pellicola</h3>
+        <div>
+          <span class="old-price">€36,99</span>
+          <span class="price">€12,99</span>
+        </div>
+        <p class="description">Protezione militare, Design slim, Vari colori, Compatibile con MagSafe</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af" alt="Cuscino Memory" />
+        <span class="price-badge">💰 Solo €34,99</span>
+        <span class="discount">-53%</span>
+        <h3>Cuscino Memory Foam Cervicale Premium</h3>
+        <div>
+          <span class="old-price">€74,99</span>
+          <span class="price">€34,99</span>
+        </div>
+        <p class="description">Ergonomico ortopedico, Fodera lavabile, Anallergico, Perfetto per dormire</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+    </div>
+
+    <h2 class="section-title">🏠 Casa & Cucina Sotto 50€</h2>
+    <div class="products-grid">
+      
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa" alt="Set Coltelli" />
+        <span class="price-badge">💰 Solo €29,99</span>
+        <span class="discount">-62%</span>
+        <h3>Set Coltelli Professionali 6 Pezzi</h3>
+        <div>
+          <span class="old-price">€78,99</span>
+          <span class="price">€29,99</span>
+        </div>
+        <p class="description">Acciaio inox, Ultra affilati, Manico ergonomico, Ceppo incluso</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba" alt="Contenitori" />
+        <span class="price-badge">💰 Solo €24,99</span>
+        <span class="discount">-58%</span>
+        <h3>Set 24 Contenitori Ermetici BPA Free</h3>
+        <div>
+          <span class="old-price">€59,99</span>
+          <span class="price">€24,99</span>
+        </div>
+        <p class="description">Varie dimensioni, Lavabili in lavastoviglie, Empilabili, Etichette incluse</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15" alt="Lampada LED" />
+        <span class="price-badge">💰 Solo €27,99</span>
+        <span class="discount">-60%</span>
+        <h3>Lampada LED da Scrivania Ricaricabile</h3>
+        <div>
+          <span class="old-price">€69,99</span>
+          <span class="price">€27,99</span>
+        </div>
+        <p class="description">10 livelli luminosità, 3 temperature colore, Protezione occhi, USB-C</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+    </div>
+
+    <h2 class="section-title">👕 Moda & Accessori Sotto 50€</h2>
+    <div class="products-grid">
+      
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Sneakers" />
+        <span class="price-badge">💰 Solo €44,99</span>
+        <span class="discount">-55%</span>
+        <h3>Sneakers Sportive Running Unisex</h3>
+        <div>
+          <span class="old-price">€99,99</span>
+          <span class="price">€44,99</span>
+        </div>
+        <p class="description">Suola ammortizzata, Traspiranti, Leggere, Design moderno, Vari colori</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62" alt="Zaino" />
+        <span class="price-badge">💰 Solo €32,99</span>
+        <span class="discount">-57%</span>
+        <h3>Zaino Laptop 17" Antifurto USB</h3>
+        <div>
+          <span class="old-price">€76,99</span>
+          <span class="price">€32,99</span>
+        </div>
+        <p class="description">Impermeabile, Porta USB, Scomparto laptop, Tasca antifurto, Ergonomico</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1577140917170-285929fb55b7" alt="Occhiali" />
+        <span class="price-badge">💰 Solo €19,99</span>
+        <span class="discount">-67%</span>
+        <h3>Occhiali da Sole Polarizzati UV400</h3>
+        <div>
+          <span class="old-price">€59,99</span>
+          <span class="price">€19,99</span>
+        </div>
+        <p class="description">Lenti polarizzate, Protezione UV400, Montatura leggera, Custodia inclusa</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="no-results" id="noResults">
+    Nessun prodotto trovato per la tua ricerca. Prova con altre parole chiave.
+  </div>
+
+  <footer>
+    © 2025 Scontismart - Tutti i diritti riservati
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="termini.html">Termini e Condizioni</a>
+      <a href="disclaimer.html">Disclaimer Affiliazioni</a>
+    </div>
+  </footer>
+
+  <script>
+    function searchProducts() {
+      const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+      const productCards = document.querySelectorAll('.product-card');
+      const noResults = document.getElementById('noResults');
+      let foundCount = 0;
+
+      if (searchTerm === '') {
+        productCards.forEach(card => {
+          card.style.display = 'block';
+        });
+        noResults.style.display = 'none';
+        return;
+      }
+
+      productCards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const description = card.querySelector('.description').textContent.toLowerCase();
+        const fullText = title + ' ' + description;
+
+        if (fullText.includes(searchTerm)) {
+          card.style.display = 'block';
+          foundCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (foundCount === 0) {
+        noResults.style.display = 'block';
+      } else {
+        noResults.style.display = 'none';
+      }
+    }
+
+    document.getElementById('searchInput').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        searchProducts();
+      }
+    });
+  </script>
+</body>
+</html>

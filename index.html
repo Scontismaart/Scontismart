@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scontismart - Trova le Migliori Offerte</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background: #f5f7fa; }
+    header { background: #0d6efd; padding: 20px; color: white; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+    .logo { font-size: 28px; font-weight: bold; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-size: 16px; }
+    .hero { background: linear-gradient(rgba(13,110,253,0.6), rgba(13,110,253,0.6)), url('https://images.unsplash.com/photo-1523275335684-37898b6baf30'); background-size: cover; background-position: center; padding: 100px 20px; text-align: center; color: white; }
+    .hero h1 { font-size: 48px; margin-bottom: 15px; }
+    .hero p { font-size: 20px; max-width: 600px; margin: auto; }
+    .section-title { text-align: center; margin: 50px 0 20px; font-size: 32px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; padding: 0 20px 50px; }
+    .card { background: white; border-radius: 12px; padding: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; transition: transform 0.2s; }
+    .card:hover { transform: scale(1.03); }
+    .card img { width: 100%; border-radius: 12px; }
+    .card h3 { margin-top: 10px; font-size: 20px; }
+    .card p { color: #555; font-size: 14px; }
+    footer { text-align: center; padding: 20px; background: #0d6efd; color: white; margin-top: 20px; }
+    .footer-links { margin-top: 10px; }
+    .footer-links a { color: white; text-decoration: underline; margin: 0 8px; font-size: 14px; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="./index.html" style="text-decoration: none; color: white;"><div class="logo">Scontismart</div></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#categorie">Categorie</a>
+      <a href="#categorie">Top Offerte</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Trova le Migliori Offerte Online</h1>
+    <p>Ogni giorno selezioniamo per te sconti reali e offerte verificate. Risparmia in modo intelligente con Scontismart.</p>
+  </section>
+
+  <h2 class="section-title" id="categorie">Categorie Popolari</h2>
+  <div class="grid">
+    <a href="tech.html" style="text-decoration: none; color: inherit;">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" />
+        <h3>Tech & Smartphone</h3>
+        <p>Le migliori offerte su telefoni e accessori.</p>
+      </div>
+    </a>
+    <a href="elettrodomestici.html" style="text-decoration: none; color: inherit;">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" />
+        <h3>Elettrodomestici</h3>
+        <p>Sconti su piccoli e grandi elettrodomestici.</p>
+      </div>
+    </a>
+    <a href="moda.html" style="text-decoration: none; color: inherit;">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?q=80&w=711&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        <h3>Moda</h3>
+        <p>Abbigliamento e accessori in super sconto.</p>
+      </div>
+    </a>
+    <a href="casa.html" style="text-decoration: none; color: inherit;">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        <h3>Casa & Arredamento</h3>
+        <p>Risparmia sui prodotti per la casa.</p>
+      </div>
+    </a>
+    <a href="offerte-lampo.html" style="text-decoration: none; color: inherit;">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1607083206869-4c7672e72a8a" />
+        <h3>⚡ Offerte Lampo</h3>
+        <p>Sconti incredibili a tempo limitato!</p>
+      </div>
+    </a>
+    <a href="sotto50.html" style="text-decoration: none; color: inherit;">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da" />
+        <h3>💰 Sotto 50€</h3>
+        <p>Prodotti di qualità a meno di cinquanta euro.</p>
+      </div>
+    </a>
+  </div>
+
+  <footer>
+    © 2025 Scontismart - Tutti i diritti riservati
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="termini.html">Termini e Condizioni</a>
+      <a href="disclaimer.html">Disclaimer Affiliazioni</a>
+    </div>
+  </footer>
+</body>
+</html>

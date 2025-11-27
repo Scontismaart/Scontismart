@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elettrodomestici - Scontismart</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background: #f5f7fa; }
+    header { background: #0d6efd; padding: 20px; color: white; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+    .logo { font-size: 28px; font-weight: bold; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-size: 16px; }
+    .category-hero { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 60px 20px; text-align: center; color: white; }
+    .category-hero h1 { font-size: 42px; margin-bottom: 15px; }
+    .category-hero p { font-size: 18px; max-width: 700px; margin: auto; }
+    .breadcrumb { padding: 20px; font-size: 14px; color: #666; }
+    .breadcrumb a { color: #0d6efd; text-decoration: none; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    .section-title { font-size: 28px; margin: 40px 0 20px; color: #333; }
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; margin-bottom: 50px; }
+    .product-card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s; }
+    .product-card:hover { transform: translateY(-5px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+    .product-card img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; }
+    .product-card h3 { margin-top: 15px; font-size: 18px; color: #333; min-height: 44px; }
+    .product-card .price { font-size: 24px; color: #0d6efd; font-weight: bold; margin: 10px 0; }
+    .product-card .old-price { text-decoration: line-through; color: #999; font-size: 16px; margin-right: 10px; }
+    .product-card .discount { background: #ff4444; color: white; padding: 5px 10px; border-radius: 5px; font-size: 14px; display: inline-block; margin: 10px 0; }
+    .product-card .description { color: #666; font-size: 14px; line-height: 1.6; margin: 10px 0; }
+    .product-card .btn { display: block; background: #0d6efd; color: white; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 15px; transition: background 0.3s; }
+    .product-card .btn:hover { background: #0b5ed7; }
+    footer { text-align: center; padding: 20px; background: #0d6efd; color: white; margin-top: 40px; }
+    .footer-links { margin-top: 10px; }
+    .footer-links a { color: white; text-decoration: underline; margin: 0 8px; font-size: 14px; }
+    .search-container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+    .search-box { display: flex; gap: 10px; }
+    .search-box input { flex: 1; padding: 14px; font-size: 16px; border: 2px solid #ddd; border-radius: 8px; }
+    .search-box button { padding: 14px 30px; background: #0d6efd; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; }
+    .search-box button:hover { background: #0b5ed7; }
+    .no-results { text-align: center; padding: 40px; color: #666; font-size: 18px; display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" style="text-decoration: none; color: white;"><div class="logo">Scontismart</div></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#categorie">Categorie</a>
+      <a href="index.html#categorie">Top Offerte</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+  </header>
+
+  <section class="category-hero">
+    <h1>🏠 Elettrodomestici</h1>
+    <p>Sconti imperdibili su elettrodomestici per la casa! Trova le migliori offerte su grandi e piccoli elettrodomestici per rendere la tua casa più smart e funzionale.</p>
+  </section>
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> > Elettrodomestici
+  </div>
+
+  <div class="search-container">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Cerca prodotti in questa categoria... (es: lavatrice, frigorifero, robot)">
+      <button onclick="searchProducts()">🔍 Cerca</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 class="section-title">🔥 Grandi Elettrodomestici</h2>
+    <div class="products-grid">
+      
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078" alt="Frigorifero" />
+        <span class="discount">-30%</span>
+        <h3>Frigorifero Combinato No Frost 300L</h3>
+        <div>
+          <span class="old-price">€699,00</span>
+          <span class="price">€489,00</span>
+        </div>
+        <p class="description">Classe energetica A++, Tecnologia No Frost, Silenzioso, Display LED</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1" alt="Lavatrice" />
+        <span class="discount">-25%</span>
+        <h3>Lavatrice 9 Kg 1400 Giri</h3>
+        <div>
+          <span class="old-price">€499,00</span>
+          <span class="price">€374,00</span>
+        </div>
+        <p class="description">Classe A+++, Motore inverter, 16 programmi, Partenza ritardata</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1585659722983-3a675dabf23d" alt="Lavastoviglie" />
+        <span class="discount">-35%</span>
+        <h3>Lavastoviglie 14 Coperti</h3>
+        <div>
+          <span class="old-price">€549,00</span>
+          <span class="price">€357,00</span>
+        </div>
+        <p class="description">Classe A++, 8 programmi, Silenziosissima 44dB, Cestelli regolabili</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a" alt="Asciugatrice" />
+        <span class="discount">-28%</span>
+        <h3>Asciugatrice Pompa di Calore 8Kg</h3>
+        <div>
+          <span class="old-price">€599,00</span>
+          <span class="price">€431,00</span>
+        </div>
+        <p class="description">Classe A+++, Sensore di umidità, Programmi automatici, Anti-piega</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+    </div>
+
+    <h2 class="section-title">☕ Piccoli Elettrodomestici Cucina</h2>
+    <div class="products-grid">
+      
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6" alt="Robot da Cucina" />
+        <span class="discount">-40%</span>
+        <h3>Robot da Cucina Multifunzione</h3>
+        <div>
+          <span class="old-price">€249,00</span>
+          <span class="price">€149,00</span>
+        </div>
+        <p class="description">1000W, 12 funzioni, Ciotola 5L, Accessori inclusi, Ricettario digitale</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6" alt="Macchina Caffè" />
+        <span class="discount">-45%</span>
+        <h3>Macchina da Caffè Automatica</h3>
+        <div>
+          <span class="old-price">€399,00</span>
+          <span class="price">€219,00</span>
+        </div>
+        <p class="description">15 bar, Display touch, Macina caffè integrato, Cappuccinatore automatico</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1585515320310-259814833e62" alt="Friggitrice ad Aria" />
+        <span class="discount">-50%</span>
+        <h3>Friggitrice ad Aria 5.5L XXL</h3>
+        <div>
+          <span class="old-price">€159,00</span>
+          <span class="price">€79,00</span>
+        </div>
+        <p class="description">1700W, 8 programmi pre-impostati, Display digitale, Ricettario incluso</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001" alt="Aspirapolvere Robot" />
+        <span class="discount">-38%</span>
+        <h3>Robot Aspirapolvere con Mappatura</h3>
+        <div>
+          <span class="old-price">€399,00</span>
+          <span class="price">€247,00</span>
+        </div>
+        <p class="description">WiFi, App controllo, 120 min autonomia, Sensori anti-caduta, Auto-ricarica</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136" alt="Frullatore" />
+        <span class="discount">-42%</span>
+        <h3>Frullatore ad Immersione 1000W</h3>
+        <div>
+          <span class="old-price">€89,00</span>
+          <span class="price">€51,62</span>
+        </div>
+        <p class="description">20 velocità, Accessori inclusi, Tritatutto, Frusta, Bicchiere graduato</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1620287341260-912e619ed40b" alt="Bollitore Elettrico" />
+        <span class="discount">-55%</span>
+        <h3>Bollitore Elettrico 1.7L Temperatura Regolabile</h3>
+        <div>
+          <span class="old-price">€59,99</span>
+          <span class="price">€27,00</span>
+        </div>
+        <p class="description">2200W, Display LED, 5 temperature, Acciaio inox, Spegnimento automatico</p>
+        <a href="https://www.amazon.it" target="_blank" class="btn">Vedi Offerta su Amazon</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="no-results" id="noResults">
+    Nessun prodotto trovato per la tua ricerca. Prova con altre parole chiave.
+  </div>
+
+  <footer>
+    © 2025 Scontismart - Tutti i diritti riservati
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="termini.html">Termini e Condizioni</a>
+      <a href="disclaimer.html">Disclaimer Affiliazioni</a>
+    </div>
+  </footer>
+
+  <script>
+    function searchProducts() {
+      const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+      const productCards = document.querySelectorAll('.product-card');
+      const noResults = document.getElementById('noResults');
+      let foundCount = 0;
+
+      if (searchTerm === '') {
+        productCards.forEach(card => {
+          card.style.display = 'block';
+        });
+        noResults.style.display = 'none';
+        return;
+      }
+
+      productCards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const description = card.querySelector('.description').textContent.toLowerCase();
+        const fullText = title + ' ' + description;
+
+        if (fullText.includes(searchTerm)) {
+          card.style.display = 'block';
+          foundCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (foundCount === 0) {
+        noResults.style.display = 'block';
+      } else {
+        noResults.style.display = 'none';
+      }
+    }
+
+    document.getElementById('searchInput').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        searchProducts();
+      }
+    });
+  </script>
+</body>
+</html>
